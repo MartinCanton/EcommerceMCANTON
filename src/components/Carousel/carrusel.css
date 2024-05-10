@@ -1,0 +1,21 @@
+
+.carousel-container {
+    width: 100%;
+    height: 700px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+    padding: 10px;
+    background-color: rgb(211, 191, 10); 
+  
+  }
+  
+  .carousel-image {    
+    height: 100%;    
+    object-fit: cover; 
+    margin: auto;    
+    border-radius: 5%;    
+
+  }
+  
