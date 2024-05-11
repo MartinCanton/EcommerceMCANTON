@@ -3,6 +3,7 @@ import { NavBar } from './components/NavBar/NavBar'
 import { ItemsListContainer } from './components/ItemsListContainer/ItemsListContainer'
 import { Carrusel } from './components/Carousel/Carrusel'
 import { Footer } from './components/Footer/Footer'
+import './main.css'
 
 function App() {  
 
