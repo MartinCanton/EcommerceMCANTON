@@ -1,4 +1,4 @@
-# E-Commerce Tienda Informatica MCANTOPN 
+# E-Commerce Tienda Informatica MCANTON 
 App creada para la cursada de ReactJS - Comisión #57765
 
 - Se realizará una app Ecommerce sobre una tienda de productos de informática
