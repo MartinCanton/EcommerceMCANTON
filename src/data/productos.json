@@ -1,62 +1,141 @@
 [
     {
-        "nombre": "Camiseta Deportiva",
-        "precio": 19.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Camiseta ligera y transpirable, perfecta para hacer ejercicio."
+        "id": 1,
+        "nombre": "Motherboard",
+        "descripcion": "Motherboard AsRock Z370",
+        "imagen": "motherboards/mother1.png",
+        "precio": 50000,
+        "stock": 200,
+        "categoria": "motherboards"
     },
     {
-        "nombre": "Zapatillas de Running",
-        "precio": 49.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Zapatillas con amortiguación avanzada para largas distancias."
+        "id": 2,
+        "nombre":"Placa de Video",
+        "descripcion": "Placa GeForce GTX 1070",
+        "imagen": "placasdevideo/placa2.png",
+        "precio": 150000,
+        "stock": 200,
+        "categoria": "placasdevideo"
     },
     {
-        "nombre": "Mochila Escolar",
-        "precio": 24.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Mochila resistente y espaciosa, ideal para el día a día escolar."
+        "id": 3,
+        "nombre":"Procesador",
+        "descripcion": "Procesador AMD Ryzen 5",
+        "imagen": "procesadores/procesador1.png",
+        "precio": 65000,
+        "stock": 200,
+        "categoria": "procesadores"
+
     },
     {
-        "nombre": "Auriculares Bluetooth",
-        "precio": 29.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Auriculares inalámbricos con sonido de alta calidad y batería de larga duración."
+        "id": 4,
+        "nombre":"Ram",
+        "descripcion": "Memoria Ram Vengance ",
+        "imagen": "otros/ram2.png",
+        "precio": 25600,
+        "stock": 200,
+        "categoria": "otros"        
     },
     {
-        "nombre": "Reloj Inteligente",
-        "precio": 79.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Reloj con monitoreo de salud y notificaciones inteligentes."
+        "id": 5,
+        "nombre": "Motherboard",
+        "descripcion":"Motherboard MSI GSeries",
+        "imagen": "motherboards/mother2.png",
+        "precio": 52000,
+        "stock": 200,
+        "categoria": "motherboards"
     },
     {
-        "nombre": "Gafas de Sol",
-        "precio": 15.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Gafas con protección UV y diseño moderno."
+        "id": 6,
+        "nombre": "Placa de Video",
+        "descripcion":"Placa Gigabyte - White",
+        "imagen": "placasdevideo/placa1.png",
+        "precio": 200000,
+        "stock":200,
+        "categoria":"placasdevideo"
+    }, 
+    {
+        "id": 7,
+        "nombre":"Gabinete",
+        "descripcion": "Gabinete - Black Blue",
+        "imagen": "otros/gabinete2.png",
+        "precio": 28000,
+        "stock": 200,
+        "categoria": "otros"
     },
     {
-        "nombre": "Bolígrafo de Lujo",
-        "precio": 9.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Bolígrafo elegante y duradero, perfecto para regalos."
+        "id": 8,
+        "nombre": "Motherboard",
+        "descripcion": "Motherboard MSI B85-G43",
+        "imagen": "motherboards/mother3.png",
+        "precio": 55000,
+        "stock": 200,
+        "categoria": "motherboards"
+    
     },
     {
-        "nombre": "Cargador Inalámbrico",
-        "precio": 19.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Cargador rápido y eficiente compatible con la mayoría de los dispositivos."
+        "id": 9,
+        "nombre":"Placa de Video",
+        "descripcion": "Placa Gigabyte - Black Orange",
+        "imagen": "placasdevideo/placa3.png",
+        "precio": 170000,
+        "stock": 200,
+        "categoria": "placasdevideo"
+    
     },
     {
-        "nombre": "Termo de Acero Inoxidable",
-        "precio": 14.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Termo de alta calidad que mantiene las bebidas calientes o frías por horas."
+        "id": 10,
+        "nombre":"Procesador",
+        "descripcion": "Procesador Intel Core i7",
+        "imagen": "procesadores/procesador2.png",
+        "precio": 69000,
+        "stock": 200,
+        "categoria": "procesadores"
     },
     {
-        "nombre": "Libreta de Notas",
-        "precio": 7.99,
-        "imagen": "https://placeholder.pics/svg/150",
-        "descripcion": "Libreta con cubierta dura y papel de alta calidad."
+        "id": 11,
+        "nombre":"Gabinete",
+        "descripcion": "Gabinete - Black Red",
+        "imagen": "otros/gabinete.png",
+        "precio": 11700,
+        "stock": 200,
+        "categoria": "otros"
+    },
+    {
+        "id": 12,
+        "nombre":"Monitor",
+        "descripcion": "Monitor Predator",
+        "imagen": "otros/monitor1.png",
+        "precio": 75000,
+        "stock": 200,
+        "categoria": "otros"
+    
+    },
+    {
+        "id": 13,
+        "nombre":"Ram",
+        "descripcion": "Memoria Ram Crucial",
+        "imagen": "otros/ram1.png",
+        "precio": 20000,
+        "stock": 200,
+        "categoria": "otros"
+    },
+    {
+        "id": 14,
+        "nombre":"Ram",
+        "descripcion": "Memoria Ram Vengance RGB",
+        "imagen": "otros/ram3.png",
+        "precio": 28000,
+        "stock": 200,
+        "categoria": "otros"
+    },
+    {
+        "id": 15,
+        "nombre":"Monitor",
+        "descripcion": "Monitor BenQ",
+        "imagen": "otros/monitor2.png",
+        "precio": 110000,
+        "stock": 200,
+        "categoria": "otros"
     }
 ]

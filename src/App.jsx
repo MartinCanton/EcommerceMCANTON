@@ -1,22 +1,28 @@
-import { useState } from 'react'
-import { NavBar } from './components/NavBar/NavBar'
-import { ItemsListContainer } from './components/ItemsListContainer/ItemsListContainer'
-import { Carrusel } from './components/Carousel/Carrusel'
-import { Footer } from './components/Footer/Footer'
-import './main.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import NavbarInfor from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Error404 from './components/Error404';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "./components/Footer"
 
-function App() {  
-
+function App() {
   return (
-    <>
-      <div>
-        <NavBar />
-        <ItemsListContainer greeting={'Bienvenido a la E-commerce de Informática MCANTON'} />        
-        <Carrusel />
-        <Footer />
-      </div>
-    </>
-  )
+    <BrowserRouter>
+      <NavbarInfor />
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting="Bienvenido a E-Commerce MCANTON" />} />
+        <Route path="/categoria/:id" element={<ItemListContainer />} />
+         <Route path="/item/:id" element={<ItemDetailContainer />} /> 
+        <Route path="/*" element={<Error404 />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>    
+  );
 }
 
-export default App
+export default App;
+
+
