@@ -4,12 +4,12 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Error404 from './components/Error404';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import CartProvider from './context/CartContext';
+import './App.css';
 
 
 function App() {
