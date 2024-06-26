@@ -4,12 +4,12 @@ const CartContext = React.createContext('');
 export const useCartContext = () => useContext(CartContext);
 
 function CartProvider({ children }) {
-    // Leer el carrito inicial desde localStorage
+    
     const initialCart = JSON.parse(localStorage.getItem('cart')) || [];
     const [cart, setCart] = useState(initialCart);
 
     useEffect(() => {
-        // Actualizar localStorage cada vez que el carrito cambie
+        
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
 
