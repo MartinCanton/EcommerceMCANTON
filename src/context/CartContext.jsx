@@ -1,11 +1,17 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react';
 
-const CartContext = React.createContext('')
+const CartContext = React.createContext('');
 export const useCartContext = () => useContext(CartContext);
 
 function CartProvider({ children }) {
+    // Leer el carrito inicial desde localStorage
+    const initialCart = JSON.parse(localStorage.getItem('cart')) || [];
+    const [cart, setCart] = useState(initialCart);
 
-    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        // Actualizar localStorage cada vez que el carrito cambie
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
 
     const totalPrice = () => {
         return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
@@ -22,7 +28,7 @@ function CartProvider({ children }) {
     const addProduct = (item, quantity) => {
         if (isInCart(item.id)) {
             setCart(cart.map(product => {
-                return product.id === item.id ? { ...product, quantity: product.quantity } : product
+                return product.id === item.id ? { ...product, quantity: product.quantity + quantity } : product
             }));
         } else {
             setCart([...cart, { ...item, quantity }]);
@@ -38,12 +44,10 @@ function CartProvider({ children }) {
             totalPrice,
             totalProducts,
             cart
-
         }}>
-
             {children}
         </CartContext.Provider>
-    )
+    );
 }
 
 export default CartProvider;
