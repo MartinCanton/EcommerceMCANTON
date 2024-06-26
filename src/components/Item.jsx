@@ -1,26 +1,38 @@
-import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
+import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassPlus } from "@fortawesome/free-solid-svg-icons";
-import Col from 'react-bootstrap/Col';
 
+function Item({ info }) {
 
-function Item({ producto }) {
   return (
     <Col>
-      <Card>
+      <Card style={{ width: '20rem', padding: 5 }}>
+        <Card.Title>{info.title}</Card.Title>
+        <Link to={`/detalle/${info.id}`} className='producto'>
+          <Card.Img
+            variant="top"
+            src={info.img}
+            alt={info.title}
+            style={{
+              height: '15rem',
+              objectFit: 'contain',
+              objectPosition: 'center 20%'
+            }}
+          />
+        </Link>
         <Card.Body>
-          <Card.Img variant="top" src={`../img/productos/${producto.imagen}`}>
-          </Card.Img>
-          <Card.Title>{producto.nombre}</Card.Title>
-          <Card.Text>{producto.descripcion}</Card.Text>
+          <Card.Text>
+            {info.description}
+          </Card.Text>
+          <Card.Text>
+            <Link to={`/detalle/${info.id}`}>
+              <FontAwesomeIcon icon={faMagnifyingGlassPlus} beat />
+              ${info.price}
+            </Link>
+          </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <Link to={`/item/${producto.id}`}>
-            <FontAwesomeIcon icon={faMagnifyingGlassPlus} beat /> Ver más...             
-          </Link>
-          <p>$ {producto.precio}</p>          
-        </Card.Footer>
       </Card>
     </Col>
   );

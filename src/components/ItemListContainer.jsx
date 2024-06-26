@@ -1,32 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import ItemList from './ItemList';
-import dataJson from '../data/productos.json';
+import { getFirestore, collection, getDocs, query, where, getDoc } from 'firebase/firestore';
 
-function ItemListContainer({greeting}) {
-  const [productos, setProductos] = useState([]);
-  const {id} = useParams ();
+function ItemListContainer({ greeting }) {
+  const [data, setData] = useState([]);
+  const { categoryId } = useParams();
 
   useEffect(() => {
-      const prm = new Promise((resolve) => {
-          setTimeout(() => {
-              resolve(id ? dataJson.filter(item => item.categoria === id) : dataJson)
-          }, 250)
-      });
+    const queryDb = getFirestore();
+    const queryCollection = collection(queryDb, 'Items');
+    if (categoryId) {
+      const queryFilter = query(queryCollection, where('categoryId', '==', categoryId))
+      getDocs(queryFilter)
+        .then(res => setData(res.docs.map(p => ({ id: p.id, ...p.data() }))))
+    } else {
+      getDocs(queryCollection)
+        .then(res => setData(res.docs.map(p => ({ id: p.id, ...p.data() }))))
+    }
+  }, [categoryId])
 
-      prm.then((data) => {
-        setProductos(data)
-      })
-  },[id]);
-  
   return (
     <div className="container">
       <div className="jumbotron">
-        <h1 className="display-4 m-3">{greeting}</h1>
+        <h1 className="display-5">{greeting}</h1>
         <hr className="my-4" />
-        <p className="lead text-center">Aquí encontrarás los mejores productos de nuestra tienda</p>
+        <p className="lead">Aquí podrás encontrar la mejor variedad de productos.</p>
       </div>
-      <ItemList productos={productos} />
+      <ItemList data={data} />
     </div>
   );
 }

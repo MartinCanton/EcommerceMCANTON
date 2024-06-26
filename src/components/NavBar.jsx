@@ -24,20 +24,21 @@ function NavbarInfor() {
           <Nav.Link as={Link} to="/">
               Inicio
             </Nav.Link>
-            <Nav.Link as={Link} to="/categoria/procesadores">
+            <Nav.Link as={Link} to="/categoryId/procesadores">
               Procesadores
             </Nav.Link>
-            <Nav.Link as={Link} to="/categoria/motherboards">
+            <Nav.Link as={Link} to="/categoryId/motherboards">
               Motherboards
             </Nav.Link>
-            <Nav.Link as={Link} to="/categoria/placasdevideo">
+            <Nav.Link as={Link} to="/categoryId/placasdevideo">
               Placas de Video
             </Nav.Link>
-            <Nav.Link as={Link} to="/categoria/otros">
+            <Nav.Link as={Link} to="/categoryId/otros">
               Más productos...
             </Nav.Link>
           </Nav>
-          <CartWidget />
+          <Nav.Link as={Link} to="Cart"><CartWidget />
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

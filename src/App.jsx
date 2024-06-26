@@ -6,20 +6,28 @@ import Error404 from './components/Error404';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import CartProvider from './context/CartContext';
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavbarInfor />
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting="Bienvenido a E-Commerce MCANTON" />} />
-        <Route path="/categoria/:id" element={<ItemListContainer />} />
-         <Route path="/item/:id" element={<ItemDetailContainer />} /> 
-        <Route path="/*" element={<Error404 />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>    
+    <BrowserRouter> 
+      <CartProvider>     
+       <NavbarInfor />
+       <Routes>
+         <Route path="/" element={<ItemListContainer greeting="Bienvenido a E-Commerce MCANTON" />} />
+         <Route path="/categoryId/:categoryId" element={<ItemListContainer />} />
+         <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} /> 
+         <Route path="/*" element={<Error404 />} />
+         <Route path="/cart" element={<Cart />} />
+         <Route path="/checkout" element={<Checkout />} />
+       </Routes>
+       <Footer />
+       </CartProvider>    
+    </BrowserRouter>
   );
 }
 
