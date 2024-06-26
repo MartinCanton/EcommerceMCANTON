@@ -8,7 +8,7 @@ Proyecto creado por Martín Cantón, en motivo del trabajo final del curso **REA
 2. **React Router**: Para gestionar la navegación y las rutas de la aplicación.
 3. **useState y useEffect**: Hooks de React para manejar el estado y los efectos secundarios.
 4. **PropTypes**: Para la validación de los tipos de props en los componentes.
-5. **CSS BOOSTRAP**: Para el estilo y diseño de la aplicación.
+5. **CSS BOOTSTRAP**: Para el estilo y diseño de la aplicación.
 6. **JSON**: Para la gestión de los datos de productos y categorías.
 7. **HTML**: Para la estructura básica de la aplicación.
 8. **JavaScript**: Para la lógica de la aplicación.
